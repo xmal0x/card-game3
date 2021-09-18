@@ -8,6 +8,13 @@ import { AboutComponent } from './components/about/about.component';
 import { GameComponent } from './components/game/game.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component: MainComponent},
+  {path: 'game', component: GameComponent},
+  {path: 'about', component: AboutComponent},
+]
 
 @NgModule({
   declarations: [
@@ -20,7 +27,8 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
