@@ -9,6 +9,7 @@ import { GameComponent } from './components/game/game.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { Routes, RouterModule } from '@angular/router';
+import { GameCardComponent } from './components/game-card/game-card.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     AboutComponent,
     GameComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    GameCardComponent
   ],
   imports: [
     BrowserModule,
