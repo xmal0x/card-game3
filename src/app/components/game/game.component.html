@@ -1,5 +1,8 @@
 <div class="game-container">
-  <div class="game-main">
+  <div class="main">
       <h2>{{currentWord[currentLanguage]}}</h2>
+  </div>
+  <div class="options-container">
+    <app-game-card *ngFor="let option of gameOptions" [currentLanguage]="currentLanguage" [word]="option"></app-game-card>
   </div>
 </div>
