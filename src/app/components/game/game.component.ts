@@ -40,8 +40,15 @@ export class GameComponent implements OnInit {
         optionsQty++;
       }
     }
-
     return options;
+  }
+
+  onResult(isRight: boolean): void {
+    if (isRight) {
+      this.nextWord(this.optionsQty, this.words);
+    } else {
+      console.log('Sorry, try again')
+    }
   }
 
 
