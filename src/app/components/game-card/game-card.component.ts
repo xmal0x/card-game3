@@ -24,7 +24,15 @@ export class GameCardComponent implements OnInit {
 
   onClick(): void {
     this.currentWord[this.currentLanguage] === this.word[this.currentLanguage]
-      ? this.onCheckCard.emit(true)
-      : this.onCheckCard.emit(false);
+      ? this.onValidAnswer()
+      : this.onNotValidAnswer()
+  }
+
+  onValidAnswer(): void {
+    this.onCheckCard.emit(true)
+  }
+
+  onNotValidAnswer(): void {
+    this.onCheckCard.emit(false);
   }
 }

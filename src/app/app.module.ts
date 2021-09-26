@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -15,7 +15,7 @@ import { GameCardComponent } from "./components/game-card/game-card.component";
 const appRoutes: Routes = [
   { path: "", component: MainComponent, data: { animation: "MainPage" } },
   { path: "game", component: GameComponent, data: { animation: "GamePage" } },
-  { path: "about", component: AboutComponent }
+  { path: "about", component: AboutComponent, data: { animation: "AboutPage" } }
 ];
 
 @NgModule({
@@ -32,7 +32,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)],
+    RouterModule.forRoot(appRoutes)
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
