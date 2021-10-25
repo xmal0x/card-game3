@@ -1,0 +1,21 @@
+.game-card {
+  border: 1px solid #272727;
+  color: #272727;
+  font-family: "Comfortaa";
+  width: 18rem;
+  height: 5rem;
+  margin: 0rem 1rem 2rem;
+  background: #ffe400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.game-card:hover {
+  transform: scale(1.1);
+}
+

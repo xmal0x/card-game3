@@ -1,4 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-html, body {
-  background-color: #272727
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+html,
+body {
+  background-color: #272727;
+  font-family: "Comfortaa";
+  color: #747474;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px 0.5rem;
+}
+
+body {
+  position: relative;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 100px;
 }

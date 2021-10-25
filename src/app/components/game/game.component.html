@@ -1,1 +1,18 @@
-<p>game works!</p>
+<div class="game-container">
+  <div class="main">
+    <h2>{{ currentWord[currentLanguage] }}</h2>
+  </div>
+  <div class="options-container">
+    <app-game-card
+      *ngFor="let option of gameOptions"
+      [currentLanguage]="currentLanguage"
+      [currentWord]="currentWord"
+      [word]="option"
+      (onCheckCard)="onResult($event)"
+    >
+    </app-game-card>
+  </div>
+  <div @insertAnimation *ngIf="notValidMessage" class="message-container">
+    {{ notValidMessage }}
+  </div>
+</div>
